@@ -3,7 +3,7 @@ title: "Assessing Daily Shelter Availability in Toronto: An Occupancy and Capaci
 subtitle: "Does Toronto has enough Daily Shelter?"
 author: 
   - Zixuan Yang
-thanks: "Code and data are available at: LINK."
+thanks: "Code and data are available at:  https://github.com/ZixuanYangFrank/Shelter.git"
 date: today
 date-format: long
 abstract: "This research examines the challenges facing Toronto's shelter system in meeting the needs of its homeless population. Despite efforts to provide support, issues of overcrowding and capacity constraints persist, exacerbated by factors such as insufficient funding and temporary bed closures. Through an analysis of occupancy rates and capacity utilization, this study aims to identify areas of improvement and inform policy recommendations for enhancing shelter services in Toronto."
@@ -23,9 +23,6 @@ library(palmerpenguins)
 
 
 # Introduction
-
-
-Introduction:
 
 Like many urban centers around the world, Toronto faces complex issues such as homelessness and providing shelter services for vulnerable populations. With its diverse and vibrant population, Toronto's housing system plays a crucial role in supporting and sheltering individuals and families facing housing insecurity. The Shelter and Support Services division in Toronto is responsible for overseeing a comprehensive network of overnight shelters and allied services aimed at meeting the urgent needs of the homeless population. At the core of this effort is the Shelter Management Information System (SMIS) database, which provides a daily list of active shelters and overnight service programs operated within the city.
 
