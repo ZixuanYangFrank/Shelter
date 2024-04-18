@@ -1,11 +1,11 @@
 #### Preamble ####
 # Purpose: Downloads and saves the data from [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
-# License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Author: Zixuan Yang
+# Date: 01 April 2024
+# Contact: zx.yang@utoronto.ca 
+# License: UofT
+# Pre-requisites: 
+# Any other information needed?  No
 
 
 #### Workspace setup ####

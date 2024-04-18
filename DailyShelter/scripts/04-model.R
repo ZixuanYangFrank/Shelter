@@ -1,11 +1,11 @@
 #### Preamble ####
-# Purpose: Models... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
-# License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Purpose: Logistic Models. 
+# Author: Zixuan Yang
+# Date: 01 April 2024
+# Contact: zx.yang@utoronto.ca 
+# License: UofT
+# Pre-requisites: 
+# Any other information needed?  No
 
 
 #### Workspace setup ####
@@ -15,23 +15,24 @@ library(rstanarm)
 #### Read data ####
 analysis_data <- read_csv("data/analysis_data/analysis_data.csv")
 
+analysis_data <- analysis_data |> mutate_if(is.character, as.factor)
 ### Model data ####
-first_model <-
+
+### Model data ####
+Shelter_model <-
   stan_glm(
-    formula = flying_time ~ length + width,
+    Occupancy_full ~ Capacity + LOCATION_CITY + SECTOR + CAPACITY_TYPE + PROGRAM_MODEL,
     data = analysis_data,
-    family = gaussian(),
+    family = binomial(link = "logit"),
     prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
-    prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
-    prior_aux = exponential(rate = 1, autoscale = TRUE),
+    prior_intercept = 
+      normal(location = 0, scale = 2.5, autoscale = TRUE),
     seed = 853
   )
-
-
 #### Save model ####
-saveRDS(
-  first_model,
-  file = "models/first_model.rds"
-)
 
+saveRDS(
+  Shelter_model,
+  file = "models/Shelter_model.rds"
+)
 
